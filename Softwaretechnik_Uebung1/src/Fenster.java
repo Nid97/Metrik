@@ -16,7 +16,7 @@ public class Fenster extends Frame {
         setSize(myWidth, myHeight);
         setVisible(true);
         setLayout(null);
-        setTitle("Metrik V1.0");
+        setTitle("Metrik V1.0.1");
 
         Canvas can = new Canvas();
         can.setLocation(50,50);

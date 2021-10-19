@@ -13,7 +13,7 @@ public class MouseClick extends MouseAdapter {
     /**
      * Die Methode wartet auf ein Mouseklick, wenn sie woanders instanziiert wird.
      * Beim Klicken auf der Zeichenflaeche, werden die Koordinaten abgefragt und
-     * die Methode paint(); gerufen, um einen Kreis an der Stelle zu zeichnen
+     * die Methode paint(); gerufen, um ein Quadrat an der Stelle zu zeichnen
      * @param e Mouseklick
      */
     @Override
@@ -32,17 +32,17 @@ public class MouseClick extends MouseAdapter {
     }
 
     /**
-     * Methode Paint(); zeichnet einen Kreis auf dem Canvas.
+     * Methode Paint(); zeichnet ein Quadrat auf dem Canvas.
      * @param g graphics Objekt
      * @param x X-Koordinaten
      * @param y Y-Koordinaten
      * @param c Canvas zum Zeichnen
      */
     public void paint(Graphics g, int x, int y, Canvas c) {
-        Ellipse2D kreis;
-        kreis = new Ellipse2D.Float(x, y, 50.0f, 50.0f);
+        Rectangle rect;
+        rect = new Rectangle(x, y,50,50);
         Graphics2D g2d = (Graphics2D) g;
-        g2d.draw(kreis);
+        g2d.draw(rect);
     }
 }
 
